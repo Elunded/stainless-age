@@ -243,7 +243,7 @@ app.get('/api/catalog', async (req, res) => {
 
 app.get('/api/categories', async (req, res) => {
   try {
-    const [rows] = await pool.query("SELECT DISTINCT category FROM stainless_age.products");
+    const [rows] = await pool.query("SELECT DISTINCT category FROM products");
     // rows – масив об’єктів, наприклад: [ { category: 'Індивідуальне замовлення' }, { category: 'Для ванни' }, ... ]
     res.json(rows);
   } catch (error) {
