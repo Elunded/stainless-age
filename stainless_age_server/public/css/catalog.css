@@ -1,0 +1,94 @@
+
+/* Стилізація фільтрів */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.filter-btn {
+    background: gray;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.filter-btn:hover {
+    background: darkgray;
+}
+
+/* Стилізація плитки товарів */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+
+/* Стилізація товарної картки */
+
+
+/* Стилізація пагінації */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.pagination button {
+    background: #ff9800;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+.pagination span {
+    font-size: 16px;
+}
+
+.this-cart-button {
+    background-color: #ff9800 ; /* основний колір кнопки */
+    color: #fff;             /* колір тексту */
+    padding: 10px 20px;      /* внутрішні відступи */
+    font-size: 16px;         /* розмір шрифту */
+    border: none;            /* без рамки */
+    border-radius: 6px;      /* заокруглення кутів */
+    cursor: pointer;         /* курсор при наведенні */
+    transition: background-color 0.3s ease; /* плавна зміна кольору */
+}
+
+.this-cart-button:hover {
+    background-color: #e68900; /* трохи темніший відтінок при hover */
+}
+
+#this-search-input {
+  border: 2px solid red;
+  display: block;
+}
+#this-search-input {
+  width: 100%;
+  max-width: 800px;       /* задає максимальну ширину */
+  padding: 10px 15px;     /* внутрішні відступи */
+  margin: 15px auto;      /* центрування по горизонталі та відступ зверху і знизу */
+  display: block;         /* блочний елемент для коректного центрування */
+  border: 1px solid #ccc; /* стандартна рамка */
+  border-radius: 4px;     /* округлені кути */
+  font-size: 1rem;        /* комфортний розмір шрифту */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* плавний перехід при фокусі */
+}
+
+#this-search-input:focus {
+  outline: none;                     /* прибираємо дефолтну рамку браузера */
+  border-color: #3498db;             /* змінюємо колір рамки при фокусі */
+  box-shadow: 0 0 5px rgba(52,152,219,0.5); /* додатковий  ефект підсвічування */
+}

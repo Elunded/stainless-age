@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог товарів – Stainless Age</title>
+    <link rel="stylesheet" href="/css/catalog.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script type="module" src="/js/card.js"></script>
+    <script type="module" src="/js/catalog.js"></script>
+    <script src="js/loadComponents.js" defer></script>
+    <link rel="stylesheet" href="/css/card.css">
+</head>
+
+<body>
+    <!-- Автоматичне завантаження хедера (якщо використовується) -->
+    <div id="header"></div>
+
+    <main>
+        <!-- Фільтри -->
+    <section><input type="text" id="this-search-input" placeholder="Пошук товарів..."></section>
+    
+    <section class="filters">
+    
+    <button class="filter-btn" data-filter="all">Всі</button>
+    <button class="filter-btn" data-filter="category1">Категорія 1</button>
+    <button class="filter-btn" data-filter="category2">Категорія 2</button>
+    <!-- Додайте інші кнопки фільтра за потребою -->
+</section>
+
+
+        <!-- Плитка товарів -->
+        <section class="catalog-grid" id="catalog-grid">
+            <!-- Тут буде динамічно вставлено товарні картки -->
+        </section>
+
+        <!-- Пагінація -->
+        <section class="pagination">
+            <button id="prev-page" disabled>Попередня</button>
+            <span id="page-info">Сторінка 1</span>
+            <button id="next-page">Наступна</button>
+        </section>
+    </main>
+
+    <!-- Автоматичне завантаження футера (якщо використовується) -->
+    <footer id="footer"></footer>
+</body>
+</html>

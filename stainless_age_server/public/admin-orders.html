@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <title>Всі замовлення</title>
+    <link rel="stylesheet" href="/css/admin-orders.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Список всіх замовлень</h1>
+      
+      <div class="orders-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Статус</th>
+              <th>Клієнт</th>
+              <th>Дата створення</th>
+              <th>Загальна сума</th>
+              <th>Дія</th>
+            </tr>
+          </thead>
+          <tbody id="orders-body">
+            <!-- Дані будуть заповнені через JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="buttons">
+        <button id="back-home">На головну</button>
+      </div>
+    </div>
+
+    <script type="module" src="/js/admin-orders.js"></script>
+  </body>
+</html>

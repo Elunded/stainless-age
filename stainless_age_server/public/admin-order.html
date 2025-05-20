@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <title>Деталі замовлення</title>
+    <link rel="stylesheet" href="/css/admin-order.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Деталі замовлення</h1>
+      <!-- Форма для редагування замовлення -->
+      <form id="order-edit-form">
+        <div class="order-info">
+          <p><strong>Номер замовлення:</strong> <span id="order-id"></span></p>
+          <p>
+            <strong>Статус замовлення:</strong>
+            <select id="order-status-select" name="order_status">
+              <option value="Прийняте">Прийняте</option>
+              <option value="Виготовляється">Виготовляється</option>
+              <option value="Виконано">Виконано</option>
+              <option value="Скасовано">Скасовано</option>
+            </select>
+          </p>
+          <p>
+  <strong>Ім'я клієнта:</strong>
+  <input type="text" id="client-name" name="client_name" placeholder="Введіть ім'я клієнта">
+</p>
+<p>
+  <strong>Телефон:</strong>
+  <input type="tel" id="client-phone" name="client_phone" placeholder="Введіть номер телефону">
+        </p>
+        <p><strong>Кількість успішних замовлень:</strong> <span id="client-successful"></span></p>
+          <p><strong>Дата замовлення:</strong> <span id="order-date"></span></p>
+          <p><strong>Загальна вартість:</strong> <span id="total-price"></span></p>
+        </div>
+        <div class="order-items">
+          <h2>Товари в замовленні</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID товару</th>
+                <th>Назва товару</th>
+                <th>Кількість</th>
+                <th>Ціна за одиницю</th>
+                <th>Сума</th>
+              </tr>
+            </thead>
+            <tbody id="order-items-body">
+              <!-- Список товарів буде генеруватись за допомогою JS -->
+            </tbody>
+          </table>
+        </div>
+        <div class="buttons">
+          <button type="submit" id="save-order">Зберегти зміни</button>
+          <button type="button" id="back-home">На головну</button>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="/js/admin-order.js"></script>
+  </body>
+</html>

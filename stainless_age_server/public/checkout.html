@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+    
+<head>
+    <link rel="stylesheet" href="css/checkout.css">
+    <script  src="js/checkout.js" defer></script>
+  <meta charset="UTF-8">
+  <title>Оформлення замовлення</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Оформлення замовлення</h1>
+    <form id="order-form">
+      <div class="form-group">
+        <label for="first-name">Ім'я:</label>
+        <input type="text" id="first-name" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Прізвище:</label>
+        <input type="text" id="last-name" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Номер телефону:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="additional-data">Додаткові дані:</label>
+        <textarea id="additional-data" name="additionalData" rows="4" placeholder="Коментар або примітки"></textarea>
+      </div>
+      <div class="form-group order-sum">
+         <span id="order-sum">0 грн</span>
+      </div>
+      <div class="button-group">
+        <button type="button" id="back-to-home">На головну</button>
+        <button type="submit" id="confirm-order" disabled>Підтвердити замовлення</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Елементи форми
+    const firstNameInput = document.getElementById('first-name');
+    const lastNameInput = document.getElementById('last-name');
+    const phoneInput = document.getElementById('phone');
+    const confirmOrderButton = document.getElementById('confirm-order');
+
+    // Функція перевірки заповнення обов'язкових полів
+    function checkRequiredFields() {
+      if (
+        firstNameInput.value.trim() &&
+        lastNameInput.value.trim() &&
+        phoneInput.value.trim()
+      ) {
+        confirmOrderButton.disabled = false;
+      } else {
+        confirmOrderButton.disabled = true;
+      }
+    }
+
+    // Слідкуємо за змінами у полях
+    firstNameInput.addEventListener('input', checkRequiredFields);
+    lastNameInput.addEventListener('input', checkRequiredFields);
+    phoneInput.addEventListener('input', checkRequiredFields);
+  </script>
+</body>
+</html>

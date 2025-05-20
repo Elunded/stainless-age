@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.company-description, .company-services, .company-location {
+    margin-bottom: 30px;
+}
+
+.company-services ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.map-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.company-contacts {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.company-contacts h2 {
+    margin-bottom: 10px;
+}
+
+.company-contacts p {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.company-contacts a {
+    color: #2c3e50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.company-contacts a:hover {
+    text-decoration: underline;
+}

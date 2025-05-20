@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}} – Stainless Age</title>
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/global.css">
+    
+    <link rel="stylesheet" href="/css/card.css">
+    
+    <script src="/js/loadComponents.js" defer></script>
+    <script type="module" src="/js/carousel.js"></script>
+</head>
+<body>
+    <div id="header"></div> <!-- Автоматичне завантаження хедера -->
+
+    <section class="this-product-info">
+        <img src="/images/{{image_url}}" alt="{{name}}" class="this-product-image" onerror="this.src='/images/product_placeholder.jpg'">
+        <div class="product-details">
+            <h1>{{name}}</h1>
+            <p class="product-description">{{description}}</p>
+            <strong class="product-price">{{price}} грн</strong>
+            <button class="cart-button">Додати до кошика</button>
+        </div>
+    </section>
+
+    <section class="product-specs">
+        <h2>Характеристики</h2>
+        <ul>
+            <li><strong>Розмір:</strong> {{size}}</li>
+            <li><strong>Вага:</strong> {{weight}}</li>
+        </ul>
+        <h4>{{shipping_available}}</h4>
+    </section>
+
+    <section class="popular-products">
+            <h2>Наших покупців також цікавить</h2>
+            <div class="products-carousel">
+                <div id="carousel-container">
+                    <!-- Динамічні картки товарів -->
+                </div>
+            </div>
+    </section>
+
+    <section class="product-reviews">
+        <h2>Відгуки покупців</h2>
+        <div id="reviews-container"></div>
+    </section>
+
+    <div id="footer"></div> <!-- Автоматичне завантаження футера -->
+
+    <script src="/js/product.js"></script>
+</body>
+</html>

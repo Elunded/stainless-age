@@ -1,0 +1,118 @@
+
+/* Секція "Про нас" */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 10%;
+    background-color: #ffffff;
+    gap: 40px;
+}
+
+.about-content {
+    flex: 1 1 50%;
+    max-width: 600px;
+}
+
+.about h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.highlights p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.about-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Популярні товари */
+.popular-products {
+    padding: 60px 10%;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.popular-products h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.products-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+.products-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.products-carousel::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+#carousel-container {
+    display: flex;
+    gap: 100px;
+    scroll-snap-align: start;
+}
+
+/* Відгуки */
+.reviews-section {
+    padding: 60px 10%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+#reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content,
+    .about-image {
+        flex: 1 1 100%;
+    }
+
+    .products-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+}

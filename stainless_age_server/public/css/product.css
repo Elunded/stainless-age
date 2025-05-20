@@ -1,0 +1,160 @@
+
+
+/* Основний блок сторінки товару */
+.this-product-info {
+    display: flex;
+    background: #fff;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.this-product-image {
+    max-width: 400px;
+    max-height: max-content;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-details {
+    margin-left: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-details h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d9534f;
+    margin: 15px 0;
+}
+
+.cart-button {
+    background: #d9534f;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: start;
+}
+.cart-button:hover {
+    background: #d9534f;
+}
+
+/* Блок характеристик */
+.product-specs {
+    background: #fff;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.product-specs h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.product-specs ul {
+    list-style: none;
+    padding: 0;
+}
+.product-specs li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Блок відгуків */
+.product-reviews {
+    background: #fff;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.product-reviews h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.review-card {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.review-card:last-child {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.review-rating {
+    color: #FFD700;
+    font-size: 18px;
+    margin: 0;
+}
+.review-text {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.review-author {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+    .product-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .product-image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .product-details {
+        margin: 20px 0 0 0;
+    }
+}
+
+
+/* Популярні товари */
+.popular-products {
+    padding: 60px 10%;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.popular-products h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.products-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+

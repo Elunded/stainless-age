@@ -1,0 +1,73 @@
+/* Загальні стилі */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Контейнер форми входу */
+.login-container {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Заголовок */
+.login-container h1 {
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  color: #333;
+}
+
+/* Стилі форми */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Мітки */
+.login-container label {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Поле введення пароля */
+.login-container input[type="password"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+/* Кнопка */
+.login-container button {
+  padding: 10px;
+  font-size: 1em;
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}

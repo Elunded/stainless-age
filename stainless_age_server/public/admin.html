@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Адміністративна панель</title>
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="css/card.css">
+  <script type="module" src="/js/admin-panel.js"></script>
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Адміністративна панель</h1>
+  </header>
+
+  <main class="admin-main-container">
+    <!-- Блок навігації: кнопки таблиць -->
+    <section class="admin-navigation">
+      <div class="admin-buttons">
+        <button id="order-table-btn" onclick="window.location.href='/admin/orders'">
+          Таблиця замовлень
+        </button>
+        <button id="reviews-table-btn" onclick="window.location.href='/admin/reviews'">
+          Таблиця відгуків
+        </button>
+      </div>
+    </section>
+
+    <!-- Секція активних замовлень -->
+    <section class="active-orders-section">
+      <h2>Активні замовлення</h2>
+      <ul class="orders-list">
+        <!-- Приклад запису активного замовлення -->
+        <li class="order-item" data-order-id="1">
+          Замовлення #1 – Клієнт: Іванов Іван
+        </li>
+        <li class="order-item" data-order-id="2">
+          Замовлення #2 – Клієнт: Петров Петро
+        </li>
+        <li class="order-item" data-order-id="3">
+          Замовлення #3 – Клієнт: Сидоров Сидір
+        </li>
+      </ul>
+    </section>
+
+    <!-- Секція фільтрування та пошуку товарів -->
+    <section class="products-filter-section">
+      <div class="filter-controls">
+        <input type="text" id="admin-search-input" placeholder="Пошук товарів...">
+        <select id="admin-category-filter">
+          <option value="all">Всі категорії</option>
+          <option value="category1">Категорія 1</option>
+          <option value="category2">Категорія 2</option>
+          <!-- додаткові опції за потреби -->
+        </select>
+        <button id="admin-search-button">Пошук</button>
+      </div>
+    </section>
+
+    <!-- Секція каталогу товарів -->
+    <section class="products-catalog-section">
+      <h2>Каталог товарів</h2>
+      <div class="products-grid">
+        <!-- Приклад плитки товару -->
+        <div class="product-tile" data-product-id="101">
+          <img src="/images/product_placeholder.jpg" alt="Назва товару 101">
+          <h3>Назва товару 101</h3>
+          <p>Короткий опис товару.</p>
+          <span class="price">199 грн</span>
+        </div>
+        <div class="product-tile" data-product-id="102">
+          <img src="/images/product_placeholder.jpg" alt="Назва товару 102">
+          <h3>Назва товару 102</h3>
+          <p>Короткий опис товару.</p>
+          <span class="price">299 грн</span>
+        </div>
+        <div class="product-tile" data-product-id="103">
+          <img src="/images/product_placeholder.jpg" alt="Назва товару 103">
+          <h3>Назва товару 103</h3>
+          <p>Короткий опис товару.</p>
+          <span class="price">399 грн</span>
+        </div>
+        <!-- більше плиток за потреби -->
+      </div>
+    </section>
+  </main>
+</body>
+</html>

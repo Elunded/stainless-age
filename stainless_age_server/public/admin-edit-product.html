@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <title>Редагування товару</title>
+    <link rel="stylesheet" href="/css/admin-edit-product.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Редагування товару</h1>
+      <form id="edit-product-form">
+        <div class="form-group">
+          <label for="product-id">ID товару:</label>
+          <input type="text" id="product-id" name="id" readonly>
+        </div>
+        <div class="form-group">
+          <label for="product-name">Назва товару:</label>
+          <input type="text" id="product-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="product-description">Опис:</label>
+          <textarea id="product-description" name="description" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="product-image_url">URL зображення:</label>
+          <input type="text" id="product-image_url" name="image_url">
+        </div>
+        <div class="form-group">
+          <label for="product-price">Ціна:</label>
+          <input type="number" id="product-price" name="price" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="product-size">Розмір:</label>
+          <select id="product-size" name="size">
+            <option value="Малий">Малий</option>
+            <option value="Середній">Середній</option>
+            <option value="Великий">Великий</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="product-weight">Вага:</label>
+          <input type="text" id="product-weight" name="weight">
+        </div>
+        <div class="form-group">
+          <label for="product-shipping_available">Доставка:</label>
+          <select id="product-shipping_available" name="shipping_available">
+            <option value="1">Доступна</option>
+            <option value="0">Недоступна</option>
+          </select>
+        </div>
+        <div class="buttons">
+          <button type="submit" id="save-changes">Підтвердити зміни</button>
+          <button type="button" id="back-home">На головну</button>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="/js/admin-edit-product.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення прийняте</title>
+    <link rel="stylesheet" href="/css/order-confirmation.css">
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>✅ Замовлення прийняте!</h1>
+        <p>Очікуйте дзвінок оператора для підтвердження деталей.</p>
+        <button id="back-home">На головну</button>
+    </div>
+
+    <script>
+        document.getElementById("back-home").addEventListener("click", () => {
+            window.location.href = "/";
+        });
+    </script>
+</body>
+</html>

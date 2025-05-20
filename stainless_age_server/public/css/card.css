@@ -1,0 +1,127 @@
+/* Контейнер каруселі: всі елементи в одному ряді, без overflow:hidden */
+.carousel-container {
+  display: flex; 
+  flex-direction: row;               /* Розташовуємо елементи горизонтально */
+  gap: 15px;                    /* Проміжки між елементами */
+  padding: 10px;
+  overflow-x:hidden;             /* Якщо елементів занадто багато, з'явиться горизонтальний скрол */
+  overflow-y: hidden;
+  /* За бажанням, можна центрувати елементи: */
+  justify-content: center;
+}
+
+/* Елементи-картки каруселі (з фіксованою шириною) */
+.carousel-item {
+  flex: 0 0 250px;              /* Фіксована ширина елемента – 250px */
+  width: 250px;
+  box-sizing: border-box;
+  /* Якщо хочете прибрати будь-які анімації, не вказуйте transition */
+  margin-right: 0px;           /* Відступ праворуч */
+}
+
+/* Якщо потрібно прибрати відступ для останнього елемента, хоча цього вже досягне justify-content */
+.carousel-item:last-child {
+  margin-right: 0;
+}
+
+/* Стилі для самої картки товару (імпортовані з card.js) */
+.product-card {
+    cursor: pointer;
+  width: 100%;                  /* Розтягнення на всю ширину контейнера carousel-item */
+  max-width: 250px;             /* Обмеження максимальною шириною, щоб не розтягувалась */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Приклад налаштування зображення товару в картці */
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Інші стилі (інформація карточки, опис, кнопка) залишаються без змін */
+.product-info {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.product-description {
+  font-size: 14px;
+  margin: 0 0 10px 0;
+  color: #666;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: initial;
+  overflow: hidden;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.add-to-cart-btn {
+  display: inline-block;
+  background-color: #ff9800;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e68900;
+}
+
+.popular-products {
+    padding: 60px 10%;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.popular-products h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.products-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+.products-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.products-carousel::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+#carousel-container {
+    display: flex;
+    gap: 100px;
+    scroll-snap-align: start;
+}

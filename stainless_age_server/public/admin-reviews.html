@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <title>Відгуки клієнтів</title>
+    <link rel="stylesheet" href="/css/admin-reviews.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Відгуки клієнтів</h1>
+      
+      <div class="reviews-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Клієнт</th>
+              <th>Текст відгуку</th>
+              <th>Дата</th>
+              <th>Дія</th>
+            </tr>
+          </thead>
+          <tbody id="reviews-body">
+            <!-- Дані будуть заповнені через JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="buttons">
+        <button id="back-home">На головну</button>
+      </div>
+    </div>
+
+    <script type="module" src="/js/admin-reviews.js"></script>
+  </body>
+</html>
