@@ -2,6 +2,7 @@ require('dotenv').config();
 
 
 const express = require('express');
+const mysql = require('mysql2/promise');
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -11,7 +12,7 @@ const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
-});
+}); // Підключаємо `db.js`
 const path = require('path');
 const app = express();
 app.use(express.urlencoded({ extended: false }));
@@ -242,7 +243,7 @@ app.get('/api/catalog', async (req, res) => {
 
 app.get('/api/categories', async (req, res) => {
   try {
-    const [rows] = await pool.query("SELECT DISTINCT category FROM stainless_age.products");
+    const [rows] = await pool.query("SELECT DISTINCT category FROM products");
     // rows – масив об’єктів, наприклад: [ { category: 'Індивідуальне замовлення' }, { category: 'Для ванни' }, ... ]
     res.json(rows);
   } catch (error) {
