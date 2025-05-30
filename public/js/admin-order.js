@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let originalItems = [];
 
   // Завантаження даних замовлення
-  fetch(`/api/order?id=${orderId}&format=json`)
+  fetch(`/orders/${orderId}&format=json`)
     .then(res => res.json())
     .then(order => {
       orderIdElem.textContent = order.id;
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       successful_orders: updatedClientSuccessful
     };
 
-    fetch(`/api/order/${orderId}`, {
+    fetch(`/orders/${orderId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

@@ -7,7 +7,7 @@ import { createProductCard } from '/js/card.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
   // Отримуємо дані продуктів із серверу
-  const response = await fetch('/products');
+  const response = await fetch('/product');
   const products = await response.json();
 
   // Отримуємо контейнер каруселі

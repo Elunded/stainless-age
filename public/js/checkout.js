@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       // Відправляємо POST-запит на /api/orders для створення замовлення
-      const response = await fetch('/api/orders', {
+      const response = await fetch('/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

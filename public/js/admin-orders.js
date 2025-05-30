@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const ordersBody = document.getElementById('orders-body');
   const backHomeBtn = document.getElementById('back-home');
 
-  fetch('/api/orders')
+  fetch('/orders')
     .then(res => res.json())
     .then(orders => {
       ordersBody.innerHTML = '';

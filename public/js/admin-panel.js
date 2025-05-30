@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Завантаження активних замовлень
   function loadActiveOrders() {
-  fetch('/api/orders/active')
+  fetch('/orders/active')
     .then(res => {
       const contentType = res.headers.get('content-type');
       if (!contentType || !contentType.includes('application/json')) {
-        console.error('Очікувався JSON від /api/orders/active, але отримано:', contentType);
+        console.error('Очікувався JSON від /orders/active, але отримано:', contentType);
         return []; // Повертаємо порожній масив
       }
       return res.json();
